@@ -43,6 +43,8 @@ Para inserir dados em uma collection já existente utilizamos o comando save.
 
 > db.nomedacollection.save({nome: “Jose”, idade: 20})
 
+<i>Note que basicamente estamos passando um JSON para ser salvo.</i>
+
 Podemos utitilizar também o comando insert e o resultado será o mesmo.
 
 > db.nomedacollection.insert({nome: “Jose”, idade: 20})
