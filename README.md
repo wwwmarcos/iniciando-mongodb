@@ -65,7 +65,7 @@ Pesquisando em campos específicos.
 
 > db.nomedacollection.find({nome: "Jose"});
 
-Esse método retornaria todos os documentos com nome "Jose".
+Esse método retornaria todos os documentos em que no campo nome, o valor fosse "Jose".
 
  --- Pesquisando apenas um documento:
 
