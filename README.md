@@ -100,7 +100,7 @@ Para remover um documento, precisamos passar para a função uma parte do docume
 
 > db.nomedacollection.remove({nome: “Jose”})
 
-É necessário tomar muito cuidado com os removes, para não remover mais que o deveria. Como por exemplo no comando acima ele removeria todos os documentos com nome "Jose".
+É necessário tomar muito cuidado com os removes, para não remover mais do que realmente queria. Como por exemplo no comando acima ele removeria todos os documentos com nome "Jose".
 Uma solução seria atribuir apenas um documento para uma variável:
 
 > var auxiliar = db.nomedacollection.findOne({nome: "Jose"})
