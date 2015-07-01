@@ -25,7 +25,7 @@ O comando use é utilizado tanto para selecionar um database, quanto para criar 
 
 > show collections
 
-O comando show collections irá listar todas as collections presentes no database selecionado, se estiver em duvidas sobre o database em utilização, use o comando dB (somente as que tem algum conteúdo dentro)
+O comando show collections irá listar todas as collections presentes no database selecionado, se estiver em duvidas sobre o database em utilização, use o comando db.
 
 ###Criando uma nova collection:
 
