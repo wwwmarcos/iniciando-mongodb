@@ -1,13 +1,13 @@
 # iniciando-mongodb
 
-Ao utilizar o mongodb dependendo da linguagem utilizada os métodos podem mudar um pouco, é sempre bom entender oque esta acontecendo por debaixo do panos. Nessa trilha irei mostra como executar comandos básicos diretamente no terminal/command line.
+Ao utilizar o mongodb dependendo da linguagem utilizada os métodos podem mudar um pouco, é sempre bom entender o que está acontecendo por debaixo do panos. Nessa trilha irei mostrar como executar comandos básicos diretamente no terminal/command line.
 O MongoDB é um banco de dados não relacional baseado em documentos, que trabalha com databases e collections (as collections são como as tabelas no sql, me julgue) para iniciar irei listar alguns comandos básicos.
 
 ###Listando Databases:
 
 > show dbs
 
-Usando esse comando, o mongo ira te mostrar todos os databases existentes. Cuidado, databases sem nenhum conteúdo, pois eles  não apareceram na lista.
+Usando esse comando, o mongo irá te mostrar todos os databases existentes. Cuidado, databases sem nenhum conteúdo, pois eles  não apareceram na lista.
 
 ###Mostrar database em utilização:
 
@@ -25,7 +25,7 @@ O comando use é utilizado tanto para selecionar um database, quanto para criar 
 
 > show collections
 
-O comando show collections irá listar todas as collections presentes no database selecionado, se estiver em duvidas sobre o database em utilização, use o comando db.
+O comando show collections irá listar todas as collections presentes no database selecionado, se estiver em dúvidas sobre o database em utilização, use o comando db.
 
 ###Criando uma nova collection:
 
@@ -55,8 +55,8 @@ O find é semelhante ao `SELECT` do sql.
 
 > db.nomedacollection.find()
 
-Utilizando a função find sem passar nada, o mongo ira nos retornar todos os documentos da collection em questão, “nomedacollection” no caso.
-Para visualizar melhor os resultados podemos utiliza a função `.pretty()` e o mongo ira nos
+Utilizando a função find sem passar nada, o mongo irá nos retornar todos os documentos da collection em questão, “nomedacollection” no caso.
+Para visualizar melhor os resultados podemos utilizar a função `.pretty()` e o mongo irá nos
 mostrar o resultado em uma sintaxe melhor.
 
 > db.nomedacollection.find().pretty()
@@ -76,7 +76,7 @@ Essa função retorna somente o primeiro resultado encontrado.
 
 ###Alterando documentos: Update
 
-Existem varias formas de realizar um update, vou mostrar uma que considero mais pratica. Utilizaremos uma variável (sim, é possível)
+Existem varias formas de realizar um update, vou mostrar uma que considero mais prática. Utilizaremos uma variável (sim, é possível)
 
 > var auxiliar = db.nomedacollection.findOne({nome: "Jose"})
 
@@ -92,11 +92,11 @@ Iniciando o update:
 
 > db.nomedacollection.update({_id: auxiliar._id}, auxiliar);
 
-Nesse processo você busca o _id que vai ser alterado, comparando com o _id que esta na sua variável auxiliar, depois passa a variável auxilar. É como se dissesse, "ache esse _id e substitua pelo oque está na variável auxiliar"
+Nesse processo você busca o _id que vai ser alterado, comparando com o _id que esta na sua variável auxiliar, depois passa a variável auxilar. É como se dissesse, "ache esse _id e substitua pelo o que está na variável auxiliar"
 
 ###Removendo documentos: Remove
 
-Para remover um documento, precisamos passar para a função uma parte do documento, no exemplo.
+Para remover um documento, precisámos passar para a função uma parte do documento, no exemplo.
 
 > db.nomedacollection.remove({nome: “Jose”})
 
@@ -108,9 +108,3 @@ Uma solução seria atribuir apenas um documento para uma variável:
 E depois assim excluir o documento selecionado.
 
 > db.nomedacollection.remove({_id: auxiliar._id})
-
-
-
-
-
-
