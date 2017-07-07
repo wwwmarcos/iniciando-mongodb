@@ -3,31 +3,31 @@
 Ao utilizar o mongodb dependendo da linguagem utilizada os métodos podem mudar um pouco, é sempre bom entender o que está acontecendo por debaixo do panos. Nessa trilha irei mostrar como executar comandos básicos diretamente no terminal/command line.
 O MongoDB é um banco de dados não relacional baseado em documentos, que trabalha com databases e collections (as collections são como as tabelas no sql, me julgue) para iniciar irei listar alguns comandos básicos.
 
-###Listando Databases:
+### Listando Databases:
 
 > show dbs
 
 Usando esse comando, o mongo irá te mostrar todos os databases existentes. Cuidado, databases sem nenhum conteúdo, pois eles  não apareceram na lista.
 
-###Mostrar database em utilização:
+### Mostrar database em utilização:
 
 > db
 
 O comando db irá mostrar o database que você está utilizando.
 
-###Trocando de database / criando um novo:
+### Trocando de database / criando um novo:
 
 > use nomeDoDataBase
 
 O comando use é utilizado tanto para selecionar um database, quanto para criar um novo, então muito cuidado para não digitar errado o nome de seu database.
 
-###Listar collections existentes:
+### Listar collections existentes:
 
 > show collections
 
 O comando show collections irá listar todas as collections presentes no database selecionado, se estiver em dúvidas sobre o database em utilização, use o comando db.
 
-###Criando uma nova collection:
+### Criando uma nova collection:
 
 > db.createCollection(“nomeDaCollection”)
 
@@ -37,7 +37,7 @@ Ao utilizar esse comando, uma nova collection é criada com o nome passado (é o
 
 #CRUD
 
-###Salvando documentos: Save / Insert
+### Salvando documentos: Save / Insert
 
 Para inserir dados em uma collection já existente utilizamos o comando save.
 
@@ -49,7 +49,7 @@ Podemos utitilizar também o comando insert e o resultado será o mesmo.
 
 > db.nomedacollection.insert({nome: “Jose”, idade: 20})
 
-###Recuperando documentos: Find.
+### Recuperando documentos: Find.
 
 O find é semelhante ao `SELECT` do sql.
 
@@ -74,7 +74,7 @@ Essa função retorna somente o primeiro resultado encontrado.
 
 > db.nomedacollection.findOne({nome: "Jose"});
 
-###Alterando documentos: Update
+### Alterando documentos: Update
 
 Existem varias formas de realizar um update, vou mostrar uma que considero mais prática. Utilizaremos uma variável (sim, é possível)
 
@@ -94,7 +94,7 @@ Iniciando o update:
 
 Nesse processo você busca o _id que vai ser alterado, comparando com o _id que esta na sua variável auxiliar, depois passa a variável auxilar. É como se dissesse, "ache esse _id e substitua pelo o que está na variável auxiliar"
 
-###Removendo documentos: Remove
+### Removendo documentos: Remove
 
 Para remover um documento, precisámos passar para a função uma parte do documento, no exemplo.
 
